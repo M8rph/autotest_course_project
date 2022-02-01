@@ -25,9 +25,9 @@ class ProductPage(BasePage):
     def should_be_same_name_book(self):
         name_book = self.browser.find_element(*ProductPageLocators.NAME_BOOK).text
         name_book_in_basket = self.browser.find_element(*ProductPageLocators.ADD_BOOK_SUCCESS_ALERT).text
-        assert name_book in name_book_in_basket, "Different name book"
+        assert name_book == name_book_in_basket, "Different name book"
 
     def should_be_same_price(self):
         price_book = self.browser.find_element(*ProductPageLocators.PRICE_BOOK).text
         price_book_in_basket = self.browser.find_element(*ProductPageLocators.PRICE_BOOK_IN_BASKET).text
-        assert price_book in price_book_in_basket, "Different price book"
+        assert price_book == price_book_in_basket, "Different price book"
