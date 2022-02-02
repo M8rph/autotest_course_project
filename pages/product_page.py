@@ -25,10 +25,18 @@ class ProductPage(BasePage):
 
     def should_be_same_name_book(self):
         name_book = self.browser.find_element(*ProductPageLocators.NAME_BOOK).text
-        name_book_in_basket = self.browser.find_element(*ProductPageLocators.ADD_BOOK_SUCCESS_ALERT).text
+        name_book_in_basket = self.browser.find_element(*ProductPageLocators.NAME_BOOK_IN_BASKET).text
         assert name_book == name_book_in_basket, "Different name book"
 
     def should_be_same_price(self):
         price_book = self.browser.find_element(*ProductPageLocators.PRICE_BOOK).text
         price_book_in_basket = self.browser.find_element(*ProductPageLocators.PRICE_BOOK_IN_BASKET).text
         assert price_book == price_book_in_basket, "Different price book"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE_ADD_TO_BASKET), \
+            "Success message is presented, but should not be"
+
+    def should_be_disappeared_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE_ADD_TO_BASKET), \
+            "Success message is not disappeared, but should disappeared"
