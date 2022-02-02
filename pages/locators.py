@@ -17,3 +17,8 @@ class ProductPageLocators():
     PRICE_BOOK = (By.CSS_SELECTOR, "p.price_color")
     PRICE_BOOK_IN_BASKET = (By.CSS_SELECTOR, ".alert:nth-child(3) strong")
     SUCCESS_MESSAGE_ADD_TO_BASKET = (By.CSS_SELECTOR, ".alert-success:nth-child(1) .alertinner")
+
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
