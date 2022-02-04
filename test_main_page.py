@@ -2,7 +2,7 @@ from .pages.main_page import MainPage
 from .pages.login_page import LoginPage
 from .pages.basket_page import BasketPage
 
-link_login = "http://selenium1py.pythonanywhere.com/ru/accounts/login/"
+link_login = "http://selenium1py.pythonanywhere.com/accounts/login/"
 
 
 def test_guest_can_go_to_login_page(browser):
