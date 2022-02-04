@@ -4,8 +4,8 @@ from .pages.basket_page import BasketPage
 from .pages.login_page import LoginPage
 from faker import Faker
 
-link_login = "http://selenium1py.pythonanywhere.com/ru/accounts/login/"
-link_product = "http://selenium1py.pythonanywhere.com/ru/catalogue/coders-at-work_207/"
+link_login = "http://selenium1py.pythonanywhere.com/accounts/login/"
+link_product = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 
 links = ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0",
          "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer1",
